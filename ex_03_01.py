@@ -4,10 +4,16 @@
 #You should use input to read a string and float() to convert the string to a number. 
 #Do not worry about error checking the user input - assume the user types numbers properly.
 
-hrs = input("Enter Hours: ")
-h = float(hrs)
+
+
+hrs = input("Enter Hours: "hrs = input("Enter Hours: ")
 rate = input("Enter the Rate: ")
-r = float(rate)
+try:
+    h = float(hrs)
+    r = float(rate)
+except:
+    print("Error, please enter numeric input")
+    quit()
 surcharge = 1.5
 if h > 40:
   surplus = h - 40
@@ -15,4 +21,4 @@ if h > 40:
   print(pay)
 else:
   pay = h * r
-  print(pay)    
+  print(pay) 
